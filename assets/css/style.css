@@ -1,0 +1,128 @@
+/* ==========================================================================
+   VERSION RESPONSIVE (MOBILES ET TABLETTES)
+   ========================================================================== */
+
+@media screen and (max-width: 768px) {
+    
+    /* --- NAVIGATION MOBILE --- */
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    .nav-menu {
+        display: none; /* Cache le menu classique pour le moment */
+    }
+
+    .btn-connect {
+        padding: 8px 15px;
+        font-size: 0.7rem;
+    }
+
+    /* --- HERO SECTION --- */
+    #hero {
+        height: auto;
+        padding: 100px 5% 50px 5%;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr; /* On passe sur une seule colonne */
+        text-align: center;
+        gap: 30px;
+    }
+
+    h1 {
+        font-size: 2.2rem; /* Réduction de la taille du titre */
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    .hero-btns {
+        flex-direction: column; /* Boutons l'un sur l'autre */
+        gap: 15px;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%; /* Les boutons prennent toute la largeur */
+    }
+
+    .hero-image img {
+        height: 350px;
+        border-left: none;
+        border-bottom: 8px solid var(--color-btp); /* Bordure en bas sur mobile */
+    }
+
+    /* --- COMPÉTENCES --- */
+    .section-padding {
+        padding: 60px 5%;
+    }
+
+    .competence-row, 
+    .competence-row.reversed {
+        grid-template-columns: 1fr; /* Une colonne */
+        direction: ltr; /* On annule l'inversion sur mobile */
+        gap: 40px;
+        margin-bottom: 60px;
+    }
+
+    .competence-image {
+        height: 300px;
+        box-shadow: 10px 10px 0px var(--bg-light);
+    }
+
+    .index {
+        font-size: 3rem;
+    }
+
+    /* --- SERVICES (GRILLE) --- */
+    .section-dark {
+        padding: 60px 5%;
+    }
+
+    .competency-grid {
+        grid-template-columns: 1fr; /* Une seule carte par ligne */
+    }
+
+    .domain-card {
+        padding: 30px 20px;
+    }
+
+    /* --- LIENS IMPORTANTS --- */
+    .important-links-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .link-card {
+        padding: 30px;
+    }
+
+    /* --- CONTACT --- */
+    #contact {
+        padding: 60px 5%;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr; /* Formulaire sous le texte */
+        gap: 50px;
+    }
+
+    .contact-header {
+        text-align: center;
+    }
+
+    .method {
+        text-align: center;
+    }
+
+    /* --- FOOTER --- */
+    footer {
+        padding: 40px 5%;
+    }
+
+    .copyright {
+        font-size: 0.65rem;
+        line-height: 1.4;
+    }
+}
