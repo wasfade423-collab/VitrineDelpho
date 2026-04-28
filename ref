@@ -1,0 +1,22 @@
+                <button class="burger md:hidden p-2 text-3xl font-bold bg-gray-100 rounded-lg hover:bg-gray-200 cursor-pointer">
+                    &equiv;
+                </button>
+
+
+
+                        // Initialisation Panier
+        let acheters = JSON.parse(localStorage.getItem('acheters')) || [];
+        quantiteDisplay.innerHTML = localStorage.getItem('nbreDequantite') || 0;
+
+        // MENU BURGER
+        let etat = true;
+        burger.addEventListener('click', ()=>{
+            nav.classList.toggle('max-md:-translate-x-100');
+            if(etat){
+                burger.innerHTML = "&times;";
+                etat=!etat;
+            }else{
+                burger.innerHTML = "&equiv;";
+                etat=!etat;
+            }
+        })
