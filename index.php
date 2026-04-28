@@ -1,10 +1,13 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aon Wai | Précision et Rigueur Architecturale</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <title>Aon Wai | Precision Through Architectural Rigor</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
 </head>
 <body>
 
@@ -13,84 +16,102 @@
             <div class="logo">AON WAI</div>
             
             <ul class="nav-menu">
-                <li><a href="">Home</a></li>
+                <li><a href="">Accueil</a></li>
                 <li><a href="#competences">Compétences</a></li>
-                <li><a href="#trading">Trading</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#mentorat">Mentorat</a></li>
+                <li><a href="#portfolio">Liens</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
-            <a href="" class="btn-connect">Download CV</a>
+            <a href="#" class="btn-connect">Télécharger CV</a>
+            <button id="burger" class="menuAction">
+                <i class="ri-menu-line"></i>
+            </button>
         </nav>
+        <div class="navMobile">
+            <ul class="nav-menu-mobile">
+                <li><a href="">Accueil</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Liens</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button id="closer" class="menuAction">
+                <i class="ri-close-large-fill"></i>
+            </button>
+        </div>
+        
     </header>
 
     <main>
+        <!-- hero -->
         <section id="hero">
             <div class="hero-container">
                 <div class="hero-text">
-                    <p class="kicker">THE MASTER ARCHITECT</p>
-                    <h1>Aon Wai: <br> Structure & Strategy</h1>
-                    <h2>Precision in Every Dimension</h2>
+                    <p class="kicker">L'ARCHITECTE MAÎTRE</p>
+                    <h1>Aon Wai : <br> Structure & Stratégie</h1>
+                    <h2>La Précision dans chaque Dimension</h2>
                     
                     <p class="hero-description">
-                        Synthesizing civil engineering rigor with high-frequency financial analysis. 
-                        Building structures and portfolios that stand the test of volatility.
+                        Synthèse de la rigueur du génie civil et de l'analyse financière à haute fréquence. 
+                        Bâtir des structures et des portefeuilles capables de résister à la volatilité.
                     </p>
 
                     <div class="hero-btns">
-                        <button class="btn-primary">VIEW BLUEPRINTS</button>
-                        <button class="btn-secondary">TRADING TERMINAL</button>
+                        <button class="btn-primary">VOIR LES PLANS</button>
+                        <button class="btn-secondary">TERMINAL DE TRADING</button>
                     </div>
                 </div>
-                <div class=""hero-image">
-                    <img src="assets/images/hero-architect.png" alt="Aon Wai - The Master Architect">
-
+                
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop" alt="Aon Wai - L'Architecte Maître">
                 </div>
 
-                <div class="live-status-card">
-                    <span class="status-label">LIVE METRIC //</span>
-                    <span class="status-value">94.8% Structural Integrity</span>
-                </div>
+                <!-- <div class="live-status-card">
+                    <span class="status-label">MÉTRIQUE EN DIRECT //</span>
+                    <span class="status-value">94.8% Intégrité Structurelle</span>
+                </div> -->
             </div>
         </section>
 
+        <!-- Compténces -->
+
         <section id="competences" class="section-padding">
             <div class="content-wrapper">
-                <div>
-                    <div>
-                        <img src="" alt="Image de btp" class="competence-image">
+                
+                <div class="competence-row">
+                    <div class="competence-media">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Expertise BTP" class="competence-image">
                     </div>
 
-                    <div>
+                    <div class="competence-text">
                         <p class="subtitle">Maîtrise technique en Bâtiment et travaux publics</p>
                         <div class="expertise-block">
                             <span class="index">01</span>
                             <h3>LICENCE TECHNIQUE EN BTP</h3>
                             <p>
-                                A foundation built on mathematical precision. My technical degree in Building 
-                                and Public Works informs every aspect of my analytical framework, from 
-                                load-bearing calculations to risk management in volatile markets.
+                                Une fondation bâtie sur la précision mathématique. Mon diplôme technique en bâtiment 
+                                informe chaque aspect de mon cadre analytique, des calculs de charge à la 
+                                gestion des risques sur les marchés volatiles.
                             </p>
                         </div>
-
                     </div>
                 </div>
 
-                <div>
-                    <div>
-                        <img src="" alt="Image du Trading Forex" class="competence-image">
+                <div class="competence-row reversed" id="trading">
+                    <div class="competence-media">
+                        <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=1000" alt="Analyse Trading Forex" class="competence-image">
                     </div>
 
-                    <div>
+                    <div class="competence-text">
                         <p class="subtitle">Maîtrise de l'Analyse Technique sur les Marchés de change.</p>
                         <div class="expertise-block">
-                            <span class="index">01</span>
+                            <span class="index">02</span>
                             <h3>TRADING FOREX</h3>
                             <p>
-                                A foundation built on mathematical precision. My technical degree in Building 
-                                and Public Works informs every aspect of my analytical framework, from 
-                                load-bearing calculations to risk management in volatile markets.
+                                Utilisation de modèles statistiques pour naviguer dans la liquidité mondiale. 
+                                Recherche de marché haute fidélité et exécution algorithmique pour des actifs à enjeux élevés.
                             </p>
                         </div>
                     </div>
@@ -98,93 +119,119 @@
             </div>
         </section>
 
-        <section id="" class="section-dark">
+
+        <section id="services" class="section-dark">
             <div class="container">
-                <h3 class="section-title">STRATEGIC COMPETENCIES // CORE DOMAINS</h3>
+                <h3 class="section-title">COMPÉTENCES STRATÉGIQUES // DOMAINES CLÉS</h3>
                 
                 <div class="competency-grid">
                     <article class="domain-card">
-                        <span>
-                            <i></i>
-                        </span>
-                        <h4>CIVIL ENGINEERING</h4>
-                        <p>Technical oversight for complex infrastructure projects. Specializing in concrete durability and structural mechanics.</p>
+                        <span class="icon-box"><i class="ri-building-2-line" id="btp"></i></span>
+                        <h4>GÉNIE CIVIL</h4>
+                        <p>Surveillance technique pour projets d'infrastructure complexes. Spécialisation en durabilité du béton.</p>
                         <ul class="tag-list">
-                            <li>// STRUCTURAL ANALYSIS</li>
-                            <li>// PROJECT MANAGEMENT</li>
-                            <li>// COST ESTIMATION</li>
+                            <li>// ANALYSE STRUCTURELLE</li>
+                            <li>// GESTION DE PROJET</li>
+                            <li>// ESTIMATION DES COÛTS</li>
                         </ul>
                     </article>
 
                     <article class="domain-card">
-                        <span>
-                            <i></i>
-                        </span>                        
-                        <h4>TRADING ANALYSIS</h4>
-                        <p>High-fidelity market research and algorithmic execution. Leveraging statistical models to navigate global liquidity.</p>
+                        <span class="icon-box"><i class="ri-stock-line" id="trade"></i></span>                        
+                        <h4>ANALYSE TRADING</h4>
+                        <p>Modélisation quantitative et évaluation de la volatilité pour les actifs financiers.</p>
                         <ul class="tag-list">
-                            <li>TECHNICAL ANALYSIS</li>
-                            <li>RISK MITIGATION</li>
-                            <li>// MACRO FORECASTING</li>
+                            <li>ANALYSE TECHNIQUE</li>
+                            <li>ATTÉNUATION DES RISQUES</li>
+                            <li>// PRÉVISIONS MACRO</li>
                         </ul>
                     </article>
 
-                    <article class="domain-card">
-                        <span>
-                            <i></i>
-                        </span>
-                        <h4>MENTORSHIP</h4>
-                        <p>Empowering the next generation of analysts. Transferring architectural discipline to the world of retail trading.</p>
+                    <article class="domain-card" id="mentorat">
+                        <span class="icon-box"><i class="ri-user-voice-line" id="mentoratIcon"></i></span>
+                        <h4>MENTORAT</h4>
+                        <p>Autonomisation de la prochaine génération d'analystes via des cadres d'apprentissage structurés.</p>
                         <ul class="tag-list">
-                            <li>CURRICULUM DESIGN</li>
-                            <li>// PSYCHOLOGICAL EDGE</li>
-                            <li>STRATEGY AUDIT</li>
+                            <li>DESIGN DE CURRICULUM</li>
+                            <li>// AVANTAGE PSYCHOLOGIQUE</li>
+                            <li>AUDIT DE STRATÉGIE</li>
                         </ul>
                     </article>
                 </div>
             </div>
         </section>
 
+        <!-- Liens -->
+
         <section id="portfolio" class="section-padding">
-            <!-- Mais ici des sections comme Quelques liens importants. 
-             1 - Lien du Mon CV
-             2 - Lien du Groupe d'accompagnement uniersitaire
-             3 - Lien du Discord de mes Traders 
-            (Sur PC les 3 sont dans flex: row; Sur Mobile on fait un swipper avec le css simple qui va changer au suivant chaque seconde.)-->
+            <h3 class="section-title">QUELQUES LIENS IMPORTANTS</h3>
+            
+            <div class="important-links-container">
+                <div class="link-card">
+                    <span class="link-number">01</span>
+                    <i class="ri-file-pdf-2-line"></i>
+                    <h4>Mon CV Professionnel</h4>
+                    <a href="#" target="_blank" class="link-action">Consulter le PDF</a>
+                </div>
+
+                <div class="link-card">
+                    <span class="link-number">02</span>
+                    <i class="ri-community-line"></i>
+                    <h4>Accompagnement Universitaire</h4>
+                    <a href="#" class="link-action">Rejoindre le Groupe</a>
+                </div>
+
+                <div class="link-card">
+                    <span class="link-number">03</span>
+                    <i class="ri-discord-line"></i>
+                    <h4>Discord des Traders</h4>
+                    <a href="#" class="link-action">Accéder au serveur</a>
+                </div>
+            </div>
         </section>
 
         <section id="contact">
             <div class="contact-grid">
-                <div class="contact-header">
-                    <h2>LET'S CONNECT</h2>
-                    <p>Building the next frontier together.</p>
+                <div>
+                    <div class="contact-header">
+                        <h2>CONNECTONS-NOUS</h2>
+                        <p>Bâtissons ensemble la prochaine frontière.</p>
+                    </div>
+    
+                    <div class="contact-methods">
+                        <div class="method">
+                            <span class="method-label"><i class="ri-whatsapp-line"></i> QUESTIONS WHATSAPP</span>
+                            <p class="method-detail"><a href="https://wa.me//+2290194853019">+229 01 56 46 86 58</a></p>
+                        </div>
+                        <div class="method">
+                            <span class="method-label"><i class="ri-mail-send-line"></i> EMAIL PROFESSIONNEL</span>
+                            <p class="method-detail"><a href="mailto:wasfade423@gmail.com">wasfade423@gmail.com</a></p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="contact-methods">
-                    <div class="method">
-                        <span class="method-label">WHATSAPP ENQUIRIES</span>
-                        <p class="method-detail">+234 800 ARCHITECT</p>
-                    </div>
-                    <div class="method">
-                        <span class="method-label">PROFESSIONAL EMAIL</span>
-                        <p class="method-detail">STRATEGY@AONWAI.COM</p>
-                    </div>
-                </div>
-
-                <form class="contact-form">
+                <form class="contact-form" method="POST" action="traitement/traitement.php">
                     <div class="form-group">
-                        <input type="text" id="name" placeholder="FULL NAME" required>
+                        <input type="text" id="nom" name="nom" placeholder="NOM" value="<?= @$_SESSION['nom'] ?>" required>
+                        <span class="error"><?= @$_SESSION["error"]["nom"] ?? "" ?></span>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="subject" placeholder="SUBJECT" required>
+                        <input type="text" id="prenom" name="prenom" placeholder="Prénom" value="<?= @$_SESSION['prenom'] ?>" required>
+                        <span class="error"><?= @$_SESSION["error"]["prenom"] ?? "" ?></span>
                     </div>                    
                     <div class="form-group">
-                        <input type="email" id="email" placeholder="EMAIL ADDRESS" required>
+                        <input type="text" id="subject" name="subject"" placeholder="SUJET" value="<?= @$_SESSION['subject'] ?>" required>
+                        <span class="error"><?= @$_SESSION["error"]["subject"] ?? "" ?></span>
+                    </div>                    
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="ADRESSE EMAIL" value="<?= @$_SESSION['email'] ?>" required>
+                        <span class="error"><?= @$_SESSION["error"]["email"] ?? "" ?></span>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" placeholder="PROJECT SCOPE"></textarea>
+                        <textarea id="message" style="resize: vertical;" name="message" placeholder="Contenu de votre message."><?= @$_SESSION['message'] ?></textarea>
+                        <span class="error"><?= @$_SESSION["error"]["message"] ?? "" ?></span>
                     </div>
-                    <button type="submit" class="btn-submit">INITIALIZE TRANSMISSION</button>
+                    <button type="submit" class="btn-submit">ENVOYEZ</button>
                 </form>
             </div>
         </section>
@@ -192,10 +239,25 @@
 
     <footer>
         <div class="footer-content">
-            <p class="copyright">2024 AON WAI | PRECISION THROUGH ARCHITECTURAL RIGOR</p>
+            <p class="copyright">2026 AON WAI | LA PRÉCISION PAR LA RIGUEUR ARCHITECTURALE</p>
             <p class="author">WALFRECHERCHE LOWEEN</p>
         </div>
     </footer>
 
+    <script>
+        let burger = document.getElementById("burger");
+        let closer = document.getElementById("closer");
+
+        burger.addEventListener('click', ()=>{
+            document.querySelector('.navMobile').style.display = "flex";
+        })
+
+        closer.addEventListener('click', ()=>{
+            document.querySelector('.navMobile').style.display = "none";
+        })        
+    </script>
+<?php 
+    //session_unset();
+?>
 </body>
 </html>

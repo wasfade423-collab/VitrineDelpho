@@ -1,3 +1,4 @@
+<?php session_abort(); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aon Wai | Précision et Rigueur Architecturale</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
 </head>
 <body>
@@ -199,29 +201,32 @@
                     <div class="contact-methods">
                         <div class="method">
                             <span class="method-label"><i class="ri-whatsapp-line"></i> QUESTIONS WHATSAPP</span>
-                            <p class="method-detail">+229 01 56 46 86 58</p>
+                            <p class="method-detail"><a href="https://wa.me//+2290194853019">+229 01 56 46 86 58</a></p>
                         </div>
                         <div class="method">
                             <span class="method-label"><i class="ri-mail-send-line"></i> EMAIL PROFESSIONNEL</span>
-                            <p class="method-detail">wasfade423@gamil.com</p>
+                            <p class="method-detail"><a href="mailto:wasfade423@gmail.com">wasfade423@gmail.com</a></p>
                         </div>
                     </div>
                 </div>
 
-                <form class="contact-form">
+                <form class="contact-form" method="POST" action="traitement/traitement.php">
                     <div class="form-group">
-                        <input type="text" id="name" placeholder="NOM COMPLET" required>
+                        <input type="text" id="nom" name="nom" placeholder="NOM" value="<?= @$_SESSION['nom'] ?>" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="subject" placeholder="OBJET" required>
+                        <input type="text" id="prenom" name="prenom" placeholder="Prénom" value="<?= @$_SESSION['prenom'] ?>" required>
                     </div>                    
                     <div class="form-group">
-                        <input type="email" id="email" placeholder="ADRESSE EMAIL" required>
+                        <input type="text" id="subject" name="subject"" placeholder="OBJET" value="<?= @$_SESSION['subject'] ?>" required>
+                    </div>                    
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="ADRESSE EMAIL" value="<?= @$_SESSION['email'] ?>" required>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" placeholder="PORTÉE DU PROJET"></textarea>
+                        <textarea id="message" style="resize: vertical;" name="contenu" placeholder="Contenu de votre message."><?= @$_SESSION['message'] ?></textarea>
                     </div>
-                    <button type="submit" class="btn-submit">INITIALISER LA TRANSMISSION</button>
+                    <button type="submit" class="btn-submit">ENVOYEZ</button>
                 </form>
             </div>
         </section>
