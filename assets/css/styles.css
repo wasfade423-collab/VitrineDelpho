@@ -372,7 +372,7 @@ footer {
 
     #hero {
         height: auto;
-        padding: 100px 5% 50px 5%;
+        padding: 80px 5% 50px 5%;
     }
 
     .hero-container {
@@ -396,6 +396,10 @@ footer {
 
     .btn-primary, .btn-secondary {
         width: 100%; 
+    }
+
+    .hero-image{
+        order: 2;
     }
 
     .hero-image img {
