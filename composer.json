@@ -1,0 +1,17 @@
+{
+    "name": "wasfade/vitrine-delpho",
+    "autoload": {
+        "psr-4": {
+            "Wasfade\\VitrineDelpho\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Wasfade",
+            "email": "wasfade423@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^7.0"
+    }
+}

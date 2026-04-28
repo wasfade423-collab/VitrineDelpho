@@ -211,6 +211,23 @@
                 </div>
 
                 <form class="contact-form" method="POST" action="traitement/traitement.php">
+                    <?php
+                        if(isset($_SESSION["succes"])){?>
+                            
+                            <div class="succes">
+                                <?= $_SESSION["succes"] ?? "" ?>
+                            </div>
+                        <?php }
+                    ?>
+
+                    <?php
+                        if(isset($_SESSION["error"]["send"])){?>
+                            
+                            <div class="errorSend">
+                                <?= $_SESSION["error"]["send"] ?? "" ?>
+                            </div>
+                        <?php }
+                    ?>                                                          
                     <div class="form-group">
                         <input type="text" id="nom" name="nom" placeholder="NOM" value="<?= @$_SESSION['nom'] ?>" required>
                         <span class="error"><?= @$_SESSION["error"]["nom"] ?? "" ?></span>

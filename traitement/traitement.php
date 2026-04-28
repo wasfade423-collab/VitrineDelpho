@@ -1,5 +1,10 @@
 <?php
-session_start();
+    require '../vendor/autoload.php';
+
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
+
+    session_start();
     if($_SERVER["REQUEST_METHOD"] === "POST"){
         $error = [];
         if(isset($_POST["nom"]) && !empty($_POST["nom"])){
@@ -37,8 +42,31 @@ session_start();
         }
         
         if(empty($error)){
-            $succes = "Données envoyées avec succes."; 
-            $_SESSION["succes"] = $succes;
+
+            //je cree une nouvelle instance de la classe PHPMailer
+            $instance = new PHPMailer(true);
+            try{
+                $instance ->isSMTP();
+                $instance ->Host = "smtp.gmail.com";
+                $instance ->SMTPAuth = true;
+                $instance ->Username = "wasfade423@gmail.com"; // mon email en l'occurence celui qui est connecté au serveur PHPMailer c'est ce email qui va valider l'envoie du message  
+                $instance ->Password = "rpuyklolkcvlsukh";
+                $instance ->SMTPSecure = "tls";
+                $instance ->Port = "587";
+                $instance ->setFrom($email, "Un visiteur du site Wab vitrine"); // l'email du visiteur
+                $instance ->addAddress("wasfade423@gmail.com");//le proprétaire du site qui va recevoir le mail
+                $instance ->Subject = $subject;
+                $instance ->Body = "
+                    Message: $message
+                    Nom: $nom $prenom
+                    Email: $email
+                ";
+                $instance->send();
+                $succes = "Message envoyé avec succes. Merci de m'avoir contacté, je vous répondrai dans les plus brefs délais!"; 
+                $_SESSION["succes"] = $succes;
+            }catch(Exception $e){
+                $_SESSION['error']['send'] = $e->getMessage();
+            }
         }else{
             $_SESSION["error"] = $error;
         }
