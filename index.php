@@ -4,16 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aon Wai | Précision et Rigueur Architecturale</title>
+    <title>DELPHIN DOSSA | Précision et Rigueur Architecturale</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">    
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
 </head>
 <body>
 
     <header>
         <nav class="navbar">
-            <div class="logo">AON WAI</div>
+            <div class="logo">DELPHIN DOSSA</div>
             
             <ul class="nav-menu">
                 <li><a href="">Accueil</a></li>
@@ -49,8 +52,8 @@
         <section id="hero">
             <div class="hero-container">
                 <div class="hero-text">
-                    <p class="kicker">L'ARCHITECTE MAÎTRE</p>
-                    <h1>Aon Wai : <br> Structure & Stratégie</h1>
+                    <p class="kicker">TECHNICIEN SUPÉRIEUR</p>
+                    <h1>Delphin DOSSA  <br> <span>Structure & Stratégie</span></h1>
                     <h2>La Précision dans chaque Dimension</h2>
                     
                     <p class="hero-description">
@@ -59,13 +62,13 @@
                     </p>
 
                     <div class="hero-btns">
-                        <button class="btn-primary">VOIR LES PLANS</button>
-                        <button class="btn-secondary">TERMINAL DE TRADING</button>
+                        <button class="btn-primary"><a href="#services">VOIR LES SERVICES</a></button>
+                        <button class="btn-secondary"><a href="">TERMINAL DE TRADING</a></button>
                     </div>
                 </div>
                 
                 <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop" alt="Aon Wai - L'Architecte Maître">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop" alt="DELPHIN DOSSA - L'Architecte Maître">
                 </div>
 
                 <!-- <div class="live-status-card">
@@ -79,7 +82,7 @@
 
         <section id="competences" class="section-padding">
             <div class="content-wrapper">
-                
+                <h3 class="section-title">COMPÉTENCES</h3>
                 <div class="competence-row">
                     <div class="competence-media">
                         <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Expertise BTP" class="competence-image">
@@ -89,7 +92,7 @@
                         <p class="subtitle">Maîtrise technique en Bâtiment et travaux publics</p>
                         <div class="expertise-block">
                             <span class="index">01</span>
-                            <h3>LICENCE TECHNIQUE EN BTP</h3>
+                            <h3 style="text-transform: uppercase;">CONSTRUCTION de Bâtiment et Travaux Publics</h3>
                             <p>
                                 Une fondation bâtie sur la précision mathématique. Mon diplôme technique en bâtiment 
                                 informe chaque aspect de mon cadre analytique, des calculs de charge à la 
@@ -108,7 +111,7 @@
                         <p class="subtitle">Maîtrise de l'Analyse Technique sur les Marchés de change.</p>
                         <div class="expertise-block">
                             <span class="index">02</span>
-                            <h3>TRADING FOREX</h3>
+                            <h3 style="text-transform: uppercase;">TRADING FOREX & INDICES SYNTHétiques</h3>
                             <p>
                                 Utilisation de modèles statistiques pour naviguer dans la liquidité mondiale. 
                                 Recherche de marché haute fidélité et exécution algorithmique pour des actifs à enjeux élevés.
@@ -119,10 +122,10 @@
             </div>
         </section>
 
-
+        <!-- Services -->
         <section id="services" class="section-dark">
             <div class="container">
-                <h3 class="section-title">COMPÉTENCES STRATÉGIQUES // DOMAINES CLÉS</h3>
+                <h3 class="section-title">SERVICES</h3>
                 
                 <div class="competency-grid">
                     <article class="domain-card">
@@ -130,9 +133,9 @@
                         <h4>GÉNIE CIVIL</h4>
                         <p>Surveillance technique pour projets d'infrastructure complexes. Spécialisation en durabilité du béton.</p>
                         <ul class="tag-list">
-                            <li>// ANALYSE STRUCTURELLE</li>
-                            <li>// GESTION DE PROJET</li>
-                            <li>// ESTIMATION DES COÛTS</li>
+                            <li>ANALYSE STRUCTURELLE</li>
+                            <li>GESTION & RÉALISATION DE PROJET</li>
+                            <li>ESTIMATION DES COÛTS</li>
                         </ul>
                     </article>
 
@@ -142,19 +145,19 @@
                         <p>Modélisation quantitative et évaluation de la volatilité pour les actifs financiers.</p>
                         <ul class="tag-list">
                             <li>ANALYSE TECHNIQUE</li>
-                            <li>ATTÉNUATION DES RISQUES</li>
-                            <li>// PRÉVISIONS MACRO</li>
+                            <li>FORMATIONS</li>
+                            <li>COATCHING & SUIVI</li>
                         </ul>
                     </article>
 
                     <article class="domain-card" id="mentorat">
                         <span class="icon-box"><i class="ri-user-voice-line" id="mentoratIcon"></i></span>
                         <h4>MENTORAT</h4>
-                        <p>Autonomisation de la prochaine génération d'analystes via des cadres d'apprentissage structurés.</p>
+                        <p>Orientation de nouveaux Bacheliers dans le choix de fillières et d'Université</p>
                         <ul class="tag-list">
-                            <li>DESIGN DE CURRICULUM</li>
-                            <li>// AVANTAGE PSYCHOLOGIQUE</li>
-                            <li>AUDIT DE STRATÉGIE</li>
+                            <li>Décryptage d'orientation</li>
+                            <li>Informations clés</li>
+                            <li>Opportunités de bourses</li>
                         </ul>
                     </article>
                 </div>
@@ -177,22 +180,22 @@
                 <div class="link-card">
                     <span class="link-number">02</span>
                     <i class="ri-community-line"></i>
-                    <h4>Accompagnement Universitaire</h4>
-                    <a href="#" class="link-action">Rejoindre le Groupe</a>
+                    <h4>Orientation Universitaire</h4>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="link-action">Rejoindre le Groupe</a>
                 </div>
 
                 <div class="link-card">
                     <span class="link-number">03</span>
                     <i class="ri-discord-line"></i>
                     <h4>Discord des Traders</h4>
-                    <a href="#" class="link-action">Accéder au serveur</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="link-action">Accéder à la communautés</a>
                 </div>
             </div>
         </section>
 
         <section id="contact">
             <div class="contact-grid">
-                <div>
+                <div class="conatct-info">
                     <div class="contact-header">
                         <h2>CONNECTONS-NOUS</h2>
                         <p>Bâtissons ensemble la prochaine frontière.</p>
@@ -201,11 +204,11 @@
                     <div class="contact-methods">
                         <div class="method">
                             <span class="method-label"><i class="ri-whatsapp-line"></i> QUESTIONS WHATSAPP</span>
-                            <p class="method-detail"><a href="https://wa.me//+2290194853019">+229 01 56 46 86 58</a></p>
+                            <p class="method-detail"><a href="https://wa.me//+2290194853019" target="_blank" rel="noopener noreferrer">+229 01 56 46 86 58</a></p>
                         </div>
                         <div class="method">
                             <span class="method-label"><i class="ri-mail-send-line"></i> EMAIL PROFESSIONNEL</span>
-                            <p class="method-detail"><a href="mailto:wasfade423@gmail.com">wasfade423@gmail.com</a></p>
+                            <p class="method-detail"><a href="mailto:wasfade423@gmail.com" target="_blank" rel="noopener noreferrer">wasfade423@gmail.com</a></p>
                         </div>
                     </div>
                 </div>
@@ -255,8 +258,21 @@
     </main>
 
     <footer>
+        <div class="footer-content1">
+            <div class="logo">DELPHIN DOSSA</div>
+            <div>
+                <h3>NAVIGATION</h3>                
+                <ul class="nav-menu">
+                        <li><a href="">Accueil</a></li>
+                        <li><a href="#competences">Compétences</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Liens</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                </ul>           
+            </div>
+        </div>
         <div class="footer-content">
-            <p class="copyright">2026 AON WAI | LA PRÉCISION PAR LA RIGUEUR ARCHITECTURALE</p>
+            <p class="copyright">&copy; 2026 DELPHIN DOSSA | LA PRÉCISION PAR LA RIGUEUR ARCHITECTURALE</p>
             <p class="author">WALFRECHERCHE LOWEEN</p>
         </div>
     </footer>

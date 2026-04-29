@@ -44,6 +44,7 @@
         if(empty($error)){
 
             //je cree une nouvelle instance de la classe PHPMailer
+            
             $instance = new PHPMailer(true);
             try{
                 $instance ->isSMTP();
